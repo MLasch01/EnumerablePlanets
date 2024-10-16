@@ -10,5 +10,23 @@
 <body>
 <h1>Pick a planet:</h1>
 
+
+<table class="table table-striped">
+    <thead >
+    <tr>
+        <th>Planet Name</th>
+        <th>Year Length</th>
+        <th>Diameter</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.yearLength} + ' Earth days in one year.'"></td>
+        <td th:text="${planet.diameter} + ' miles'"></td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
